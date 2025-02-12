@@ -1,0 +1,7 @@
+Какие компании организуют перелеты из Владивостока (Vladivostok)?
+
+SELECT DISTINCT name
+FROM company,
+     Trip
+WHERE Trip.company = Company.id
+      AND town_from = 'Vladivostok';
