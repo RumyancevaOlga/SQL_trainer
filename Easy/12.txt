@@ -6,4 +6,4 @@ SELECT Trip.id,
        COALESCE(COUNT(Pass_in_trip.id)) AS count
 FROM Trip
 LEFT JOIN Pass_in_trip ON Trip.id = Pass_in_trip.trip
-GROUP BY Trip.id
+GROUP BY Trip.id;
