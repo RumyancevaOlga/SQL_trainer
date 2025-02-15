@@ -1,0 +1,10 @@
+Выведите идентификатор пассажира Стив Мартин (Steve Martin)
+и дату и время его прилёта в Лондон (London)
+
+SELECT DISTINCT Passenger.id,
+       time_in
+FROM Trip, Pass_in_trip, Passenger
+WHERE Passenger.name = 'Steve Martin'
+      AND Passenger.id = Pass_in_trip.passenger
+      AND Trip.town_to = 'London'
+      AND Trip.id = Pass_in_trip.trip;
