@@ -1,0 +1,6 @@
+Сколько всего 10-ых классов
+
+SELECT COUNT(*)
+AS count
+FROM Class
+WHERE name LIKE "10%";
