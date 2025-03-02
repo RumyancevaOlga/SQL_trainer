@@ -1,0 +1,6 @@
+Выясните, во сколько по расписанию начинается четвёртое занятие.
+
+SELECT DISTINCT start_pair
+FROM Timepair
+LEFT JOIN Schedule on Timepair.id = Schedule.number_pair
+WHERE Schedule.number_pair = 4;
