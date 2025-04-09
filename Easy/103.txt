@@ -1,0 +1,7 @@
+Вывести список имён сотрудников, получающих большую заработную плату,
+чем у непосредственного руководителя.
+
+SELECT a.name
+FROM Employee a, Employee b
+WHERE b.id = a.chief_id
+    AND a.salary > b.salary;
