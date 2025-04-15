@@ -1,0 +1,9 @@
+Напишите запрос, который выведет имена пилотов, которые в качестве
+второго пилота (second_pilot_id) в августе 2023 года летали в New York
+
+SELECT Pilots.name AS name
+FROM Pilots
+LEFT JOIN Flights ON Pilots.pilot_id = Flights.second_pilot_id
+WHERE Flights.destination = 'New York'
+      AND MONTH(Flights.flight_date) = 8
+      AND YEAR(Flights.flight_date) = 2023;
